@@ -20,4 +20,16 @@ div{
 
 div img {
     width: 500px;
+    color: yellow;
+    background: brown;
+    font: 3em sans;
+}
+
+table {
+    width: 300px;
+    border: 1px solid black;
+}
+
+td {
+    border: 3px solid gainsboro;
 }
