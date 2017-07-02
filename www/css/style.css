@@ -10,3 +10,14 @@ h1 {
     background: lightyellow;
     text-align: center;
 }
+
+div{
+    width: 500px;
+    float: left;
+    margin-right: 20pt;
+    border: 1px solid black;
+}
+
+div img {
+    width: 500px;
+}
