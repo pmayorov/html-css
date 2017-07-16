@@ -1,5 +1,4 @@
-/* Common, initial, reset rules */
-
+/* Reset & common rules */
 
 * {
     padding: 0;
@@ -15,9 +14,7 @@ body{
     font-family: Verdana, Tahoma, sans-serif;
 }
 
-/* Inner Table rules*/
-
-h1 {
+h1#hw-name {
     font-weight: normal;
     font-size: 1.5em;
     text-align: center;
@@ -26,36 +23,33 @@ h1 {
     margin: 0 0 50px 0;
 }
 
-/* Стили для внешней таблицы */
+/* Other rules */
 
-table {
+table.outer {
     margin: 0 auto;
     width: 60%;
 }
 
-table td {
+table.outer td {
     padding: 10px;
     background: #FEFDD9;
 }
 
-
-td:first-child {
-    background: #F7F7F7;
+table.outer td.nav-cell {
     width: 30%;
+    background: #F7F7F7;
 }
-
-/* Стили для внутренней таблицы */
 
 table.inner {
     width: 100%;
 }
 
 table.inner td {
-    background: #fff;
+    padding: 10px;
+    background: #FFFFFF;
     border-bottom: 2px solid #F7F7F7;
 }
 
 table.inner td:hover {
     background: #CFE4F5;
 }
-
