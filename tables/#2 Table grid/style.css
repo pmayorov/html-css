@@ -50,7 +50,7 @@ table.main {
     background: #CDD5D8;
 }
 
-table.main tr.footer {
+table.main tr.header {
     height: 150px;
     background: #99AAAF;
     color: #FFFFFF;
@@ -72,6 +72,10 @@ table.main tr.top-nav-menu a {
 table.main tr.top-nav-menu td {
     width: 16.667%;
     min-width: 100px;
+}
+
+table.main tr.top-nav-menu td:not(:last-child) {
+    border-right: 3px solid #99AAAF;
 }
 
 table.main td.columns {
@@ -112,11 +116,5 @@ table.content td {
     vertical-align: middle;
     border: 1px solid #5D686B;
     padding: 10px;
-}
-
-/* Debug rule for controlling the borders & sizes of objects */
-
-.i-see {
-    border: 1px solid dimgray;
 }
 
