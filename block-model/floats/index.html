@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #image-container {
+            width: 440px;
+            background-color: blueviolet;
+            padding: 10px 0 0 10px;
+        }
+
+        #image-container div {
+            float: left;
+            width: 100px;
+            height: 100px;
+            background-color: #99AAAF;
+            margin: 0 10px 10px 0;
+        }
+
+        .clear-fix::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div id="image-container" class="clear-fix">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+</body>
+</html>

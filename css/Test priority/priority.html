@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style>
+		div {
+			color: blue;
+		}
+
+		#d1 {
+			color: green;
+		}
+
+		.d2 {
+			color: blue;
+		}
+
+		.d1 {
+			color: green;
+		}
+	</style>
+</head>
+	<body>
+		<div>blue</div>
+		<div style="color: red">red</div>
+		<div id="d1" style="color: red">red</div>
+		<div id="d3" class="d2" style="color: red">red</div>
+		<div id="d2">blue</div>
+		<div id="d4" class="d1">green</div>
+		<div class="d1">green</div>
+		<div class="d1 d2">green</div>
+		<div class="d2 d1">green</div>
+	</body>
+</html>
