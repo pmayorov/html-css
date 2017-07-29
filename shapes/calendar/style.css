@@ -3,15 +3,16 @@
 * {
     padding: 0;
     margin: 0;
+    opacity: 0.96;
 }
 
 body {
     background: linear-gradient(#F0F0F0, transparent 1px),
     linear-gradient(90deg, #F0F0F0, transparent 1px),
-    linear-gradient(#E3E3E3, transparent 1px),
-    linear-gradient(90deg, #E3E3E3, transparent 1px);
+    linear-gradient(#cbcbcb, transparent 1px),
+    linear-gradient(90deg, #cbcbcb, transparent 1px);
     background-size: 25px 25px,
-    25px 2525px,
+    25px 25px,
     50px 50px,
     50px 50px;
     font-family: Verdana, Tahoma, sans-serif;
@@ -19,15 +20,125 @@ body {
 
 #lesson-topic {
     height: 50px;
-    margin-bottom: 25px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    margin-bottom: 50px;
     padding-left: 20px;
-    font: bold 1.5em Verdana;
     color: #FFF;
     background-color: rgba(170, 183, 184, .3);
+    font: bold 1.5em Verdana;
     line-height: 50px;
-    box-sizing: border-box;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Other rules */
+/*  Other rules
+
+    Календарь не центрировал по странице, что бы удобно было использовать
+    инструмент разработчика + размеры календаря совпадают с фоновой сеткой */
+
+.calendar {
+    width: 600px;
+    height: 600px;
+    box-sizing: border-box;
+    margin-left: 100px;
+    border-radius: 30px;
+    background-color: #DBD7D2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+}
+
+.calendar #title  {
+    height: 75px;
+    color: #FFF;
+    background-color: #17806D;
+    border-radius: 30px 30px 0 0;
+    font: bold 3em garamond, sans;
+    text-align: center;
+    line-height: 75px;
+    letter-spacing: .2em;
+}
+
+.month-nav {
+    position: relative;
+    height: 75px;
+    color: #FFFFFF;
+    background-color: #5D686B;
+    font: normal bold 3em garamond, sans;
+    text-align: center;
+    line-height: 75px;
+    letter-spacing: .1em;
+}
+
+.button-back {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    margin-top: -30px;
+    border: 30px solid transparent;
+    border-right: 50px solid #CFCFCF;
+}
+
+.button-forward {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    margin-top: -30px;
+    border: 30px solid transparent;
+    border-left: 50px solid #CFCFCF;
+}
+
+.button-back:hover {
+    border-right-color: #D6BE5A;
+}
+
+.button-forward:hover {
+    border-left-color: #D6BE5A;
+}
+
+.days-table {
+    width: calc(100% - 50px);
+    margin: auto;
+    height: calc(600px - 75px - 85px);
+    background-color: #DBD7D2;
+    border-collapse: collapse;
+    border-radius: 0 0 30px 30px;
+}
+
+.days-table td,
+.days-table th {
+    font: normal 2.2em garamond, sans;
+    border-bottom: 2px solid darkgray;
+    text-align: center;
+    width: calc(100%/7);
+}
+
+.days-table tr:last-child td {
+    border-bottom: 0;
+}
+
+/*  Стилизация дней не текущего месяца */
+.not-month-day {
+    color: #AAA6A1;
+}
+
+/*  Стилизация СБ и ВС. Исключаются дни НЕ текущего месяца */
+.days-table tbody td:nth-child(n+6):not(.not-month-day) {
+    color: #8B0000;
+}
+
+/*  HOVER-правило ПН --> ПТ. Исключаются наименования дней недели и дни не текущего месяца  */
+.days-table tbody > td:not(.not-month-day):hover {
+    color: #F7F7F7;
+    background-color: #A8A5A2;
+}
+
+/* HOVER-правило СБ и ВС. Исключаются наименования дней недели, дни с ПН по ПТ, и дни не текущего месяца */
+.days-table tbody td:nth-child(n+6):not(.not-month-day):hover {
+    color: #DBD7D2;
+    background-color: rgba(139, 0, 0, .5);
+}
+
+
 
