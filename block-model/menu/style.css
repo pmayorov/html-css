@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#horizontal-menu {
+    line-height: 40px;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#horizontal-menu > li {
+    display: inline-block;
+}
+
+#horizontal-menu > li > a {
+    display: block;
+    height: 40px;
+    width: 80px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    background-color: goldenrod;
+}
