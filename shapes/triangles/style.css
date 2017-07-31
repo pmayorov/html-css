@@ -1,0 +1,250 @@
+/* Reset & common rules */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(#F0F0F0, transparent 1px),
+    linear-gradient(90deg, #F0F0F0, transparent 1px),
+    linear-gradient(#E3E3E3, transparent 1px),
+    linear-gradient(90deg, #E3E3E3, transparent 1px);
+    background-size: 10px 10px,
+    10px 10px,
+    20px 20px,
+    20px 20px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#lesson-topic {
+    height: 50px;
+    margin-bottom: 25px;
+    padding-left: 20px;
+    color: #FFF;
+    background-color: rgba(170, 183, 184, .3);
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 50px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Other rules */
+
+.figure {
+    position: relative;
+    margin: 0 auto;
+}
+
+.figure::after,
+.figure::before {
+    display: block;
+    content: '';
+    position: absolute;
+}
+
+.figure-1 {
+    background-color: rgba(136, 76, 153, .6);
+    width: 320px;
+    height: 100px;
+}
+
+.figure-1::before {
+    left: calc(50% - 50px);
+    top: 100%;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 50px;
+    border-top-color: rgba(136, 76, 153, .6);
+}
+
+.figure-2 {
+    background-color: rgba(29, 131, 72, .7);
+    width: 250px;
+    height: 100px;
+}
+
+.figure-2::before {
+    top: 0;
+    left: 100%;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 50px;
+    border-left-color: rgba(29, 131, 72, .7);
+}
+
+.figure-2::after {
+    left: 0;
+    top: 100%;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 40px;
+    border-right-color: rgba(29, 131, 72, .7);
+    border-top-color: rgba(29, 131, 72, .7);
+}
+
+.figure-3 {
+    position: relative;
+    width: calc(320px - 50px);
+    height: 100px;
+    margin: 0 auto;
+    background-color: rgba(255, 160, 97, .7);
+}
+
+.figure-3::after {
+    top: 0;
+    left: 100%;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 50px;
+    border-left-color: rgba(255, 160, 97, .7);
+}
+
+.figure-3::before {
+    top: 0;
+    right: 100%;
+    border-top: 50px solid rgba(255, 160, 97, .7);
+    border-bottom: 50px solid rgba(255, 160, 97, .7);
+    border-left: 50px solid transparent;
+}
+
+.figure-4 {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgba(146, 131, 222, .7);
+}
+
+.figure-4::before {
+    bottom: 100%;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 50px;
+    border-bottom-color: rgba(146, 131, 222, .7);
+}
+
+.figure-4::after {
+    top: 100%;
+    border-left: 50px solid rgba(146, 131, 222, .7);
+    border-right: 50px solid rgba(146, 131, 222, .7);
+    border-bottom: 50px solid transparent;
+}
+
+.figure-5 {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(235, 235, 84, .7);
+    width: 320px;
+    height: 100px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.figure-5::after {
+    top: 0;
+    left: 100%;
+    border-left: 50px solid rgba(235, 235, 84, .7);
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+}
+
+.figure-6 {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(0, 74, 129, .7);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+
+.figure-6::before {
+    top: 40px;
+    left: -10px;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 80px;
+    border-right-color: rgba(236, 255, 4, .7);
+}
+
+.figure-7 {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(62, 170, 250, .7);
+    width: 220px;
+    height: 160px;
+}
+
+.figure-7::after {
+    top: 0;
+    left: 100%;
+    height: 110px;
+    border-left: 50px solid rgba(62, 170, 250, .7);
+    border-top: 50px solid transparent;
+}
+
+.figure-8 {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(167, 0, 53, .7);
+    width: 320px;
+    height: 100px;
+}
+
+.figure-8::after {
+    top: 100%;
+    border-top: 40px solid rgba(167, 0, 53, .7);
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+}
+
+.figure-9 {
+    position: relative;
+    margin: 0 auto;
+    background-color: rgba(68, 155, 174, 1);
+    width: 300px;
+    height: 150px;
+    border: 10px solid rgba(166, 229, 243, 1);
+}
+
+.figure-9::before {
+    top: calc((150px - 2 * 55px) / 2);
+    right: 100%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 55px;
+    border-right-color: rgba(166, 229, 243, 1);
+}
+
+.figure-9::after {
+    top: calc((150px - 2 * 40px) / 2);
+    right: 100%;
+    border-style: solid;
+    border-color: transparent;
+    border-width: 40px;
+    border-right-color: rgba(68, 155, 174, 1);
+}
+
+table {
+    width: 100%
+}
+
+table tr td {
+    position: relative;
+    height: 300px;
+    border: 1px solid darkgray;
+}
+
+.number-of-figure {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0;
+    left: 0;
+    background-color: darkgray;
+    color: white;
+    font: bold 14px sans-serif;
+    line-height: 30px;
+    text-align: center;
+}
