@@ -129,7 +129,7 @@ body {
 }
 
 /*  HOVER-правило ПН --> ПТ. Исключаются наименования дней недели и дни не текущего месяца  */
-.days-table tbody > td:not(.not-month-day):hover {
+.days-table tbody td:not(.not-month-day):hover {
     color: #F7F7F7;
     background-color: #A8A5A2;
 }
