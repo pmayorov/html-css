@@ -30,7 +30,60 @@ body {
     line-height: 50px;
 }
 
-/*  Other rules
+/*  Other rules */
+
+.battery {
+    position: relative;
+    width: 400px;
+    height: 150px;
+    border: 10px solid black;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.battery::after {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 60px;
+    background-color: #000;
+    left: 100%;
+    top: 50%;
+    margin-top: calc(-60px / 2);
+    border-radius: 0 10px 10px 0;
+
+}
+
+.low-energy::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 10%;
+    height: 150px;
+    background-color: #FF0000;
+    left: 0;
+}
+
+.mid-energy::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 50%;
+    height: 150px;
+    background-color: #FFA500;
+    left: 0;
+}
+
+.full-energy::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 150px;
+    background-color: #008000;
+    left: 0;
+}
 
 
 
