@@ -1,0 +1,77 @@
+/* Reset & common rules */
+* {
+    padding: 0;
+    margin: 0;
+    opacity: 0.96;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(#F0F0F0, transparent 1px),
+    linear-gradient(90deg, #F0F0F0, transparent 1px),
+    linear-gradient(#cbcbcb, transparent 1px),
+    linear-gradient(90deg, #cbcbcb, transparent 1px);
+    background-size: 25px 25px,
+    25px 25px,
+    50px 50px,
+    50px 50px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#lesson-topic {
+    height: 50px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    margin-bottom: 50px;
+    padding-left: 20px;
+    color: #FFF;
+    background-color: rgba(170, 183, 184, .3);
+    font: bold 1.5em Verdana;
+    line-height: 50px;
+}
+
+/*  Other rules */
+.square {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -150px;
+    background-color: #FF6347;
+}
+
+.circle {
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+    border-radius: 50%;
+    background-color: #FFA500;
+}
+
+.cross {
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    margin: auto;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: #FFF;
+}
+
+.cross::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    margin: auto;
+    top: 0; bottom: 0; left: calc(-100px/2 + 10px);
+    background-color: #FFF;
+}
+
+
+
+
