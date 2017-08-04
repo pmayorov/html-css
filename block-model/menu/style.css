@@ -3,7 +3,6 @@
 * {
     padding: 0;
     margin: 0;
-    /*  opacity: 0.96; */
 }
 
 body {
@@ -16,6 +15,7 @@ body {
     50px 50px,
     50px 50px;
     font-family: Verdana, Tahoma, sans-serif;
+    overflow-y: scroll;
 }
 
 #lesson-topic {
@@ -31,80 +31,79 @@ body {
 }
 
 /*  Other rules */
-.nav-menu {
+.nav-container {
     position: relative;
-    width: 80%;
-    border: 1px solid goldenrod;
+    width: 100%;
+    background-color: #e2e8f5;
+    box-shadow: 2px 2px 5px #d3d3d3;
 }
 
-.buttons-main-menu * {
+.main-menu {
+    width: calc(150px * 4);
+    margin: 0 auto;
+}
+
+.main-menu * {
     list-style-type: none;
     text-decoration: none;
 }
 
-.buttons-main-menu > li {
+.main-menu > li {
     display: block;
     float: left;
-    margin-right: 50px;
     width: 150px;
     height: 50px;
-    background-color: #e2e8f5;
-    border-radius: 10px;
+    margin: 0 auto;
     text-align: center;
-}
-
-.buttons-main-menu a {
-    color: #808080;
     line-height: 50px;
 }
 
-.buttons-main-menu li:hover {
-    background-color: #ecf2ff;
+.main-menu a {
+    color: #63718f;
+}
+
+.main-menu li:hover {
+    background-color: #63718f;
     cursor: pointer;
-    box-shadow: 2px 2px 3px lightgray;
 }
 
-/* Смена цвета ссылки при :hover на пункт меню.
-Два правила для того, что бы менялся цвет, как при наведении
-на саму ссылку, так и при наведении в область li-блока */
-.buttons-main-menu > li:hover a,
-.buttons-main-menu > li > a:hover {
-    color: #6495ed;
+.main-menu li:hover > a {
+    color: #f5f5f5;
 }
 
-.buttons-main-menu ul {
+.main-menu ul {
     display: none;
 }
 
-.buttons-main-menu li:hover > ul {
+.main-menu li:hover > ul {
     display: block;
 }
 
-.buttons-main-menu > li:active ul {
-    display: block;
-}
-
-.buttons-menu {
-    background-color: #fefdd9;
-    padding: 20px;
-}
-
-.buttons-sub-menu-1 {
+.sub-menu-1,
+.sub-menu-2 {
     position: absolute;
+    box-sizing: border-box;
     width: 200px;
-    padding: 20px;
     background-color: #e2e8f5;
-    border-radius: 15px;
+    box-shadow: 2px 2px 5px #d3d3d3;
 }
 
-.buttons-sub-menu-2 {
+.sub-menu-2 {
+    left: 100%;
+    margin-top: -50px;
+}
+
+.etc:after {
     position: absolute;
-    left: 95%;
-    margin-top: -100px;
-    width: 200px;
-    padding: 20px;
-    background-color: #c6ccd9;
-    border-radius: 15px;
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    right: 15px;
+    margin-top: -32px;
+    border: 7px solid transparent;
+    border-right: 0;
+    border-left: 10px solid #adb4c4;
 }
 
 .clear-fix::after {
