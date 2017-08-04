@@ -3,7 +3,7 @@
 * {
     padding: 0;
     margin: 0;
-    opacity: 0.96;
+    /*  opacity: 0.96; */
 }
 
 body {
@@ -24,11 +24,91 @@ body {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
     margin-bottom: 50px;
     padding-left: 20px;
-    color: #FFF;
+    color: #fff;
     background-color: rgba(170, 183, 184, .3);
     font: bold 1.5em Verdana;
     line-height: 50px;
 }
 
 /*  Other rules */
+.nav-menu {
+    position: relative;
+    width: 80%;
+    border: 1px solid goldenrod;
+}
 
+.buttons-main-menu * {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.buttons-main-menu > li {
+    display: block;
+    float: left;
+    margin-right: 50px;
+    width: 150px;
+    height: 50px;
+    background-color: #e2e8f5;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.buttons-main-menu a {
+    color: #808080;
+    line-height: 50px;
+}
+
+.buttons-main-menu li:hover {
+    background-color: #ecf2ff;
+    cursor: pointer;
+    box-shadow: 2px 2px 3px lightgray;
+}
+
+/* Смена цвета ссылки при :hover на пункт меню.
+Два правила для того, что бы менялся цвет, как при наведении
+на саму ссылку, так и при наведении в область li-блока */
+.buttons-main-menu > li:hover a,
+.buttons-main-menu > li > a:hover {
+    color: #6495ed;
+}
+
+.buttons-main-menu ul {
+    display: none;
+}
+
+.buttons-main-menu li:hover > ul {
+    display: block;
+}
+
+.buttons-main-menu > li:active ul {
+    display: block;
+}
+
+.buttons-menu {
+    background-color: #fefdd9;
+    padding: 20px;
+}
+
+.buttons-sub-menu-1 {
+    position: absolute;
+    width: 200px;
+    padding: 20px;
+    background-color: #e2e8f5;
+    border-radius: 15px;
+}
+
+.buttons-sub-menu-2 {
+    position: absolute;
+    left: 95%;
+    margin-top: -100px;
+    width: 200px;
+    padding: 20px;
+    background-color: #c6ccd9;
+    border-radius: 15px;
+}
+
+.clear-fix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
