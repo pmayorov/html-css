@@ -1,26 +1,34 @@
+/* Reset & common rules */
+
+* {
+    padding: 0;
+    margin: 0;
+    opacity: 0.96;
+}
+
 body {
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(#F0F0F0, transparent 1px),
+    linear-gradient(90deg, #F0F0F0, transparent 1px),
+    linear-gradient(#cbcbcb, transparent 1px),
+    linear-gradient(90deg, #cbcbcb, transparent 1px);
+    background-size: 25px 25px,
+    25px 25px,
+    50px 50px,
+    50px 50px;
+    font-family: Verdana, Tahoma, sans-serif;
 }
 
-#horizontal-menu {
-    line-height: 40px;
-    font-size: 0;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+#lesson-topic {
+    height: 50px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
+    margin-bottom: 50px;
+    padding-left: 20px;
+    color: #FFF;
+    background-color: rgba(170, 183, 184, .3);
+    font: bold 1.5em Verdana;
+    line-height: 50px;
 }
 
-#horizontal-menu > li {
-    display: inline-block;
-}
+/*  Other rules */
 
-#horizontal-menu > li > a {
-    display: block;
-    height: 40px;
-    width: 80px;
-    font-size: 18px;
-    text-align: center;
-    text-decoration: none;
-    background-color: goldenrod;
-}
