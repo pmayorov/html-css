@@ -1,0 +1,7 @@
+.row {
+    border: 1px solid gray;
+}
+
+div[class*="col-md"] {
+    border: 1px solid gray;
+}
