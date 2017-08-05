@@ -43,26 +43,28 @@ body {
     margin: 0 auto;
 }
 
-.main-menu * {
-    list-style-type: none;
+.main-menu a {
     text-decoration: none;
 }
 
+.main-menu li {
+    list-style-type: none;
+}
+
 .main-menu > li {
-    display: block;
     float: left;
-    width: 150px;
-    height: 50px;
-    margin: 0 auto;
-    text-align: center;
-    line-height: 50px;
 }
 
 .main-menu a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
     color: #63718f;
 }
 
-.main-menu li:hover {
+.main-menu a:hover {
     background-color: #63718f;
     cursor: pointer;
 }
@@ -93,10 +95,9 @@ body {
     margin-top: -50px;
 }
 
-.etc:after {
-    position: absolute;
-    display: block;
+.etc::after {
     content: "";
+    position: absolute;
     width: 0;
     height: 0;
     right: 15px;
