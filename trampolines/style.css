@@ -1,4 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e9dbce;
+}
+
+nav {
+    height: 40px;
+    background-color: #52aace;
+}
+
+header {
+    font-size: 0;
+    background-color: #91daf5;
+    text-align: center;
+}
+
+main {
+    background-color: #e9dbce;
+    padding-bottom: 40px;
+}
+
+footer {
+    height: 500px;
+    background-color: #2d3e50;
+    border-top: 10px solid #52afd8;
+}
+
 .container {
     margin: 0 auto;
     width: 1200px;
 }
+
+#carusel {
+    display: block;
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+}
+
+.banners {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    background-color: #e9dbce;
+    font-size: 0;
+}
+
+.banners figure {
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.banners figure:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.banners a {
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.banners a:last-of-type {
+    margin-right: 0;
+}
+
+main section.container {
+    width: 1040px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+main section.container h2 {
+    padding: 15px 0 10px 0;
+    font: bold 1.7em sans-serif;
+    color: #5d686b;
+}
+
+main section.container h3 {
+    padding-top: 10px;
+    font: bold italic 1.4em serif;
+    color: #5d686b;
+}
+
+main section.container article:first-of-type h2 {
+    padding: 0;
+}
+
+main section.container p {
+    font: normal 1.2em serif;
+    color: #5d686b;
+    padding-top: 0.7em;
+}
+
+main section.container ul {
+    font: italic 1.2em serif;
+    color: #5d686b;
+    list-style-position: inside;
+    list-style-type: circle;
+}
+
+main article .photo-right {
+    float: right;
+    margin-left: 20px;
+}
+
+main article .photo-right-nopadding {
+    position: relative;
+    right: -20px;
+    float: right;
+    margin-left: 20px;
+}
+
+main figure.photo-gallery {
+    margin-top: 10px;
+}
+
+main figure.photo-gallery img:not(:last-child) {
+    margin-right: 20px;
+}
+
+main section figure .photo-gallery-big {
+    width: 650px;
+    height: 500px;
+}
+
+main section figure .photo-gallery-small {
+    width: 330px;
+    height: 500px;
+}
+
+.clear-fix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
