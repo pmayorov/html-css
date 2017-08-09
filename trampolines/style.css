@@ -107,50 +107,129 @@ nav input[type="search"] {
     width: 100%;
     height: 250px;
     background-color: #fff;
-    font-size: 0;
 }
 
 #carusel div.container {
     width: 1200px;
     height: 100%;
-    font-size: 0;
 }
 
-#carusel h2 {
-    font-size: 1.5em;
+#carusel h5.carusel-caption {
+    float: left;
+    width: 1040px;
+    padding: 10px 20px 0 20px;
+    margin-bottom: 5px;
+    font: normal bold 1.2em sans-serif;
+    color: #3483a5;
 }
 
 #carusel .nav-button-left {
     float: left;
+    position: relative;
     width: 80px;
     height: 100%;
-    background-color: whitesmoke;
+    opacity: 0.4;
 }
 
 #carusel .nav-button-right {
     float: right;
+    position: relative;
     width: 80px;
     height: 100%;
-    background-color: whitesmoke;
+    opacity: 0.4;
+}
+
+#carusel .nav-button-left img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: calc(-90px / 2);
+}
+
+#carusel .nav-button-right img {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: calc(-90px / 2);
+}
+
+#carusel .nav-button-left:hover,
+#carusel .nav-button-right:hover {
+    opacity: 1.0;
 }
 
 #carusel div.carusel-unit {
-    display: inline-block;
+    position: relative;
+    float: left;
+}
+
+#carusel div.carusel-unit a {
     width: 208px;
-    height: 200px;
-    background-color: #f5f5f5;
-    /*font-size: 0;*/
+    height: 160px;
 }
 
 #carusel div.carusel-unit::after {
-    content: "kjsjklkljlkdsd";
     position: absolute;
-    color: rebeccapurple;
-    font-size: 0.7em;
+    left: 10px;
+    top: 90%;
+    padding-top: 5px;
+    color: #b7a99d;
+    font: normal 1em sans-serif;
 }
 
-#carusel div.carusel-unit:hover {
-    background-color: #889fbf;
+#carusel div.carusel-unit:hover::before {
+    content: url("images/icons/photo.png");
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: 999;
+    width: 280px;
+    height: 200px;
+    border: 1px solid #c6ccd9;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+#carusel div.carusel-unit.place-01 a {
+    content: url("images/slider01.jpg");
+}
+
+#carusel div.carusel-unit.place-02 a {
+    content: url("images/slider02.jpg");
+}
+
+#carusel div.carusel-unit.place-03 a {
+    content: url("images/slider03.jpg");
+}
+
+#carusel div.carusel-unit.place-04 a {
+    content: url("images/slider04.jpg");
+}
+
+#carusel div.carusel-unit.place-05 a {
+    content: url("images/tramp-01.jpg");
+}
+
+#carusel div.place-01::after {
+    content: "Trampoliny EasyJump zawiera";
+}
+
+#carusel div.place-02::after {
+    content: "Sapphire Trampolina ogrodowa z siatką";
+}
+
+#carusel div.place-03::after {
+    content: "Trampolina to nie tyle zabawka";
+}
+
+#carusel div.place-04::after {
+    content: "Hop-Sport Trampolina ogrodowa";
+}
+
+#carusel div.place-05::after {
+    content: "Warto też kupić trampolinę";
 }
 
 .banners {
