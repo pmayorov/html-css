@@ -1,0 +1,131 @@
+
+.carusel input {
+	display: none;
+}
+
+.carusel {
+	width: 600px;
+	height: 178px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.slides {
+	overflow: hidden;
+}
+
+#arrows label {
+	display: none;
+	opacity: 0.6;
+}
+
+#arrows label:hover {
+	opacity: 1;
+}
+
+#slide1:checked ~ #arrows label:nth-child(3),
+#slide2:checked ~ #arrows label:nth-child(1),
+#slide3:checked ~ #arrows label:nth-child(2) {
+	width: 0;
+	height: 0;
+	display: block;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 20px solid #FD6D26;
+	border-left: 0 solid #FD6D26;
+	border-style: solid;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+	left: -22px;
+}
+
+#slide1:checked ~ #arrows label:nth-child(2),
+#slide2:checked ~ #arrows label:nth-child(3),
+#slide3:checked ~ #arrows label:nth-child(1) {
+	width: 0;
+	height: 0;
+	display: block;
+	border-top: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	border-right: 0 solid #FD6D26;
+	border-left: 20px solid #FD6D26;
+	border-style: solid;
+	position: absolute;
+	top: 50%;
+	margin-top: -20px;
+	cursor: pointer;
+	right: -22px;
+}
+
+.inner {
+	width: 500%;
+}
+
+#slide1:checked ~ .slides .inner {margin-left: 0}
+#slide2:checked ~ .slides .inner {margin-left: -200px}
+#slide3:checked ~ .slides .inner {margin-left: -400px}
+
+.slides .inner {
+	transition: all 0.8s ease-in-out;
+}
+
+.clearfix::after {
+	content: '';
+	display: block;
+	clear: both;
+} 
+
+.trampoline {
+	float: left;
+	box-sizing: border-box;
+	width: 200px;
+	border: 2px solid #FFF;
+	padding: 5px;
+	text-align: center;
+}
+
+.trampoline:hover {
+	border: 2px solid #47AEBF;
+}
+
+.trampoline img {
+	width: 100%;
+}
+
+.trampoline-title {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 17px;
+	font-family: 'Arial';
+}
+
+.description {
+	display: inline-block;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.description li {
+	float: left;
+}
+
+.description li a {
+	display: none;
+	padding: 10px 10px 0 10px;
+	font-size: 23px;
+	text-decoration: none;
+	color: black;
+}
+
+.description li a:hover {
+	text-decoration: underline;
+	color: blue;
+}
+
+.trampoline:hover .description a {
+	display: block;
+}
