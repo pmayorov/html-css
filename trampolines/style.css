@@ -116,156 +116,199 @@ nav input[type="search"] {
     background-color: #fff;
 }
 
-#carusel > div.container {
-    width: 1200px;
-    height: 100%;
-}
-
-#carusel h5.carusel-caption {
-    float: left;
-    width: 1040px;
-    padding: 10px 20px 0 20px;
-    margin-bottom: 5px;
-    font: normal bold 1.2em sans-serif;
+#carusel .slides-caption {
+    position: absolute;
+    top: 10px;
+    left: 30px;
+    font: normal normal 1.3em sans-serif;
     color: #3483a5;
 }
 
-/* СЛАЙДЕР. Основной контейнер для изображений */
-
-#carusel div.carusel-unit {
+#carusel > div.container {
+    width: 1040px;
+    height: 100%;
     position: relative;
+}
+
+#carusel input {
+    display: none;
+}
+
+#carusel label {
+    opacity: 0.5;
+}
+
+#carusel label:hover {
+    opacity: 1;
+}
+
+#carusel .all-slides {
+    overflow: hidden;
+}
+
+#carusel .inner {
+    margin-top: 45px;
+    width: 500%;
+}
+
+#carusel .slide-unit {
     float: left;
     width: 208px;
-    height: 160px;
+    height: 205px;
+    background-size: 100% 160px;
+    background-repeat: no-repeat;
 }
 
-/* СЛАЙДЕР. Задаю размеры для контейнера. Изображения как бы задумываются кликабельными с переходом по ссылке */
+/* Стилизация подписей под фото слайдера */
 
-#carusel div.carusel-unit a {
-    width: 208px;
-    height: 160px;
+#carusel div.slide-unit::before {
+    position: relative;
+    top: 170px;
+    padding: 0 10px;
+    color: #484848;
+    font: normal .8em sans-serif;
 }
 
-/* СЛАЙДЕР. Контейнеры для навигационных кнопок */
 
-#carusel .nav-button-left {
+#carusel div.slide-unit:nth-of-type(1)::before {
+    content: "Trampoliny EasyJump zawiera 1";
+}
+
+#carusel div.slide-unit:nth-of-type(2)::before {
+    content: "Trampoliny EasyJump zawiera 2";
+}
+
+#carusel div.slide-unit:nth-of-type(3)::before {
+    content: "Trampoliny EasyJump zawiera 3";
+}
+
+#carusel div.slide-unit:nth-of-type(4)::before {
+    content: "Trampoliny EasyJump zawiera 4";
+}
+
+#carusel div.slide-unit:nth-of-type(5)::before {
+    content: "Trampoliny EasyJump zawiera 5";
+}
+
+#carusel div.slide-unit:nth-of-type(6)::before {
+    content: "Trampoliny EasyJump zawiera 6";
+}
+
+#carusel div.slide-unit:nth-of-type(7)::before {
+    content: "Trampoliny EasyJump zawiera 7";
+}
+
+#carusel div.slide-unit:nth-of-type(8)::before {
+    content: "Trampoliny EasyJump zawiera 8";
+}
+
+
+#carusel div.slide-unit:nth-of-type(1) {
+    background-image: url("images/slider01.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(2) {
+    background-image: url("images/slider02.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(3) {
+    background-image: url("images/slider03.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(4) {
+    background-image: url("images/slider04.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(5) {
+    background-image: url("images/slider05.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(6) {
+    background-image: url("images/slider05.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(7) {
+    background-image: url("images/slider05.jpg");
+}
+
+#carusel div.slide-unit:nth-of-type(8) {
+    background-image: url("images/slider05.jpg");
+}
+
+/* Раздел указывающий на какой промежуток сдвигать изображения при нажатии на стрелку */
+
+#slide1:checked ~ .all-slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ .all-slides .inner {
+    margin-left: -208px;
+}
+
+#slide3:checked ~ .all-slides .inner {
+    margin-left: -416px;
+}
+
+#slide4:checked ~ .all-slides .inner {
+    margin-left: -624px;
+}
+
+/* Стилизация плавного перехода */
+
+#carusel .all-slides .inner {
+    transition: all .8s ease-in-out;
+}
+
+/* Выбор "лейблов" при переходах влево - вправо */
+
+#slide1:checked ~ .arrows label:nth-child(4),
+#slide2:checked ~ .arrows label:nth-child(1),
+#slide3:checked ~ .arrows label:nth-child(2),
+#slide4:checked ~ .arrows label:nth-child(3) {
+    position: absolute;
+    content: url("images/icons/arrow-left.png");
+    cursor: pointer;
+    right: calc(100% + 20px);
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+#slide1:checked ~ .arrows label:nth-child(2),
+#slide2:checked ~ .arrows label:nth-child(3),
+#slide3:checked ~ .arrows label:nth-child(4),
+#slide4:checked ~ .arrows label:nth-child(1) {
+    position: absolute;
+    content: url("images/icons/arrow-right.png");
+    cursor: pointer;
+    left: calc(100% + 20px);
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+/*.description {
+    display: inline-block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.description li {
     float: left;
-    position: relative;
-    width: 80px;
-    height: 100%;
-    opacity: 0.4;
 }
 
-#carusel .nav-button-right {
-    float: right;
-    position: relative;
-    width: 80px;
-    height: 100%;
-    opacity: 0.4;
+.description li a {
+    display: none;
+    padding: 105px;
+    text-decoration: none;
+    color: #202f4e;
 }
 
-/* СЛАЙДЕР. Позиционное выравнивание навигационных кнопок */
-
-#carusel .nav-button-left img {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    margin-top: calc(-90px / 2);
-}
-
-#carusel .nav-button-right img {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    margin-top: calc(-90px / 2);
-}
-
-#carusel .nav-button-left:hover,
-#carusel .nav-button-right:hover {
-    opacity: 1.0;
-}
-
-/* СЛАЙДЕР. Стилизация подписи под иллюстрацией */
-
-#carusel div.carusel-unit::after {
-    position: absolute;
-    left: 10px;
-    top: 90%;
-    padding-top: 5px;
-    color: #b7a99d;
-    font: normal 1em sans-serif;
-}
-
-/* СЛАЙДЕР. Всплывающее окно при наведении на элемент слайдера */
-
-/*#carusel div.carusel-unit:hover::before {
-    content: url("images/icons/photo.png");
-    position: absolute;
-    left: -50%;
-    top: -50%;
-    z-index: 999;
-    width: 280px;
-    height: 200px;
-    border: 1px solid #c6ccd9;
-    background-color: #fff;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    opacity: 0.8;
-}
-
-#carusel div.carusel-unit.place-01 a {
-    content: url("images/slider01.jpg");
-}
-
-#carusel div.carusel-unit.place-02 a {
-    content: url("images/slider02.jpg");
-}
-
-#carusel div.carusel-unit.place-03 a {
-    content: url("images/slider03.jpg");
-}
-
+.slide-unit:hover .description a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: whitesmoke;
 }*/
-
-#carusel div.carusel-unit.place-01 a {
-    content: url("images/slider01.jpg");
-}
-
-#carusel div.carusel-unit.place-02 a {
-    content: url("images/slider02.jpg");
-}
-
-#carusel div.carusel-unit.place-03 a {
-    content: url("images/slider03.jpg");
-}
-
-#carusel div.carusel-unit.place-04 a {
-    content: url("images/slider04.jpg");
-}
-
-#carusel div.carusel-unit.place-05 a {
-    content: url("images/tramp-01.jpg");
-}
-
-#carusel div.place-01::after {
-    content: "Trampoliny EasyJump zawiera";
-}
-
-#carusel div.place-02::after {
-    content: "Sapphire Trampolina ogrodowa z siatką";
-}
-
-#carusel div.place-03::after {
-    content: "Trampolina to nie tyle zabawka";
-}
-
-#carusel div.place-04::after {
-    content: "Hop-Sport Trampolina ogrodowa";
-}
-
-#carusel div.place-05::after {
-    content: "Warto też kupić trampolinę";
-}
 
 /* Стилизация раздела рекламных баннеров */
 
@@ -355,8 +398,7 @@ main figure.photo-gallery a:not(:last-child) {
     margin-right: 20px;
 }
 
-main figure.photo-gallery a
-{
+main figure.photo-gallery a {
     position: relative;
 }
 
