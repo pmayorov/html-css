@@ -24,9 +24,7 @@
 
 <header><a href="#"><img src="images/header-img.jpg" width="1200" height="280" alt="header image"></a></header>
 
-<!-- Сделал что-то типа визуального слайдера, но без какого-либо функионала -->
-
-<div id="carusel">
+<div id="carousel">
 
     <div class="container">
         <input id="slide1" type="radio" name="slide" checked/>
@@ -39,19 +37,77 @@
         <div class="all-slides">
             <div class="inner">
                 <div class="slide-unit">
-<!--                    <ul class="description">
+                    <img src="images/slider01.jpg"/>
+                    <p class="title">Trampoliny EasyJump 1</p>
+                    <ul class="description">
                         <li><a href="#">5ft</a></li>
                         <li><a href="#">10ft</a></li>
                         <li><a href="#">15ft</a></li>
-                    </ul>-->
+                    </ul>
                 </div>
-                <div class="slide-unit"></div>
-                <div class="slide-unit"></div>
-                <div class="slide-unit"></div>
-                <div class="slide-unit"></div>
-                <div class="slide-unit"></div>
-                <div class="slide-unit"></div>
-                <div class="slide-unit"></div>
+                <div class="slide-unit">
+                    <img src="images/slider02.jpg"/>
+                    <p class="title">Trampoliny EasyJump 2</p>
+                    <ul class="description">
+                        <li><a href="#">6ft</a></li>
+                        <li><a href="#">11ft</a></li>
+                        <li><a href="#">16ft</a></li>
+                    </ul>
+                </div>
+                <div class="slide-unit">
+                    <img src="images/slider03.jpg"/>
+                    <p class="title">Trampoliny EasyJump 3</p>
+                    <ul class="description">
+                        <li><a href="#">7ft</a></li>
+                        <li><a href="#">12ft</a></li>
+                        <li><a href="#">17ft</a></li>
+                    </ul>
+                </div>
+                <div class="slide-unit">
+                    <img src="images/slider04.jpg"/>
+                    <p class="title">Trampoliny EasyJump 4</p>
+                    <ul class="description">
+                        <li><a href="#">8ft</a></li>
+                        <li><a href="#">13ft</a></li>
+                        <li><a href="#">18ft</a></li>
+                    </ul>
+                </div>
+                <div class="slide-unit">
+                    <img src="images/slider05.jpg"/>
+                    <p class="title">Trampoliny EasyJump 5</p>
+                    <ul class="description">
+                        <li><a href="#">9ft</a></li>
+                        <li><a href="#">14ft</a></li>
+                        <li><a href="#">19ft</a></li>
+                    </ul>
+                </div>
+                <div class="slide-unit">
+                    <img src="images/slider05.jpg"/>
+                    <p class="title">Trampoliny EasyJump 6</p>
+                    <ul class="description">
+                        <li><a href="#">10ft</a></li>
+                        <li><a href="#">15ft</a></li>
+                        <li><a href="#">20ft</a></li>
+                    </ul>
+                </div>
+                <div class="slide-unit">
+                    <img src="images/slider05.jpg"/>
+                    <p class="title">Trampoliny EasyJump 7</p>
+                    <ul class="description">
+                        <li><a href="#">11ft</a></li>
+                        <li><a href="#">16ft</a></li>
+                        <li><a href="#">21ft</a></li>
+                    </ul>
+                </div>
+                <div class="slide-unit">
+                    <img src="images/slider05.jpg"/>
+                    <p class="title">Trampoliny EasyJump 8</p>
+                    <ul class="description">
+                        <li><a href="#">12ft</a></li>
+                        <li><a href="#">17ft</a></li>
+                        <li><a href="#">22ft</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 
@@ -65,15 +121,41 @@
 </div>
 
 <div class="banners">
-    <figure>
-        <a href="#"><img src="images/banners/banner1.jpg" width="340" height="160" alt="banner1"/></a>
-        <a href="#"><img src="images/banners/banner2.jpg" width="340" height="160" alt="banner2"/></a>
-        <a href="#"><img src="images/banners/banner3.jpg" width="340" height="160" alt="banner3"/></a>
-    </figure>
-    <figure>
-        <a href="#"><img src="images/banners/bannerbig.jpg" width="815" height="205" alt="bannerbig"/></a>
-        <a href="#"><img src="images/banners/certyfikaty.jpg" width="215" height="205" alt="certyfikaty"/></a>
-    </figure>
+    <div class="container">
+        <figure>
+            <a href="#"><img src="images/banners/banner1.jpg" width="340" height="160" alt="banner1"/></a>
+            <a href="#"><img src="images/banners/banner2.jpg" width="340" height="160" alt="banner2"/></a>
+            <a href="#"><img src="images/banners/banner3.jpg" width="340" height="160" alt="banner3"/></a>
+        </figure>
+        <figure>
+
+            <div class="adv-carousel clear-fix">
+
+                <input type="radio" id="adv-id-slide1" name="adv-point" checked/>
+                <input type="radio" id="adv-id-slide2" name="adv-point"/>
+                <input type="radio" id="adv-id-slide3" name="adv-point"/>
+                <input type="radio" id="adv-id-slide4" name="adv-point"/>
+
+                <div class="adv-slides clear-fix">
+                    <div class="adv-inner clear-fix">
+                        <div class="adv-slide"><img src="images/adv01.jpg"/></div>
+                        <div class="adv-slide"><img src="images/adv02.jpg"/></div>
+                        <div class="adv-slide"><img src="images/adv03.jpg"/></div>
+                        <div class="adv-slide"><img src="images/adv04.jpg"/></div>
+                    </div>
+                </div>
+
+                <div class="adv-controls">
+                    <label for="adv-id-slide1"></label>
+                    <label for="adv-id-slide2"></label>
+                    <label for="adv-id-slide3"></label>
+                    <label for="adv-id-slide4"></label>
+                </div>
+            </div>
+
+            <a href="#"><img src="images/banners/certyfikaty.jpg" width="215" height="205" alt="certyfikaty"/></a>
+        </figure>
+    </div>
 </div>
 
 <main>
@@ -92,7 +174,8 @@
                 Przede wszystkim warto zaznaczyć: dziecko na trampolinie może się bawić tylko pod opieką kogoś
                 dorosłego,
                 który będzie czuwał nad zabawą, sprawował kontrolę.</p>
-            <p>Jest jednak wiele rzeczy na które należy zwrócić uwagę podczas dokonywania zakupów!
+            <p>
+                Jest jednak wiele rzeczy na które należy zwrócić uwagę podczas dokonywania zakupów!
                 Po pierwsze trampolina musi posiadać certyfikat jakości, wraz ze wzrostem zainteresowania
                 trampolinami
                 wzrosła też produkcja tanich i nie do końca bezpiecznych sprzętów. Najtańsze trampoliny kosztują ok.
@@ -100,11 +183,12 @@
                 zł,
                 ale zabawa na niej będzie bardzo ryzykowna. TUS, ISO, GS – to któryś z tych certyfikatów powinna
                 posiadać
-                dobra trampolina.</p>
+                dobra trampolina.
+            </p>
         </article>
         <article>
 
-            <img class="photo-article-nopadding" src="images/tramp-02.jpg" width="329" height="551" alt="" />
+            <img class="photo-article-nopadding" src="images/tramp-02.jpg" width="329" height="551" alt=""/>
 
             <h2>Pełny zestaw bezpiecznej trampoliny EasyJump zawiera:</h2>
             <ul>
@@ -160,10 +244,10 @@
     <div id="end-body" class="container clear-fix">
 
         <span class="foot-info-left">
-                <a href="#end-body">Trampoliny</a>&emsp;
-                <a href="#end-body">Kontakt</a>&emsp;
-                <a href="#end-body">O nas</a>&emsp;
-                <a class="fb-logo" href="https://www.facebook.com"></a>&emsp;
+                <a href="#end-body">Trampoliny</a>
+                <a href="#end-body">Kontakt</a>
+                <a href="#end-body">O nas</a>
+                <a class="fb-logo" href="https://www.facebook.com"></a>
                 <a class="twitter-logo" href="https://www.twitter.com"></a>
         </span>
 
@@ -173,7 +257,7 @@
             <span>Zmien jezyk</span>
         </div>
 
-        <hr />
+        <hr/>
 
         <span class="foot-info-right">&#169;&ensp;2015&nbsp;Bezpieczna trampolina</span>
 

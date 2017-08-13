@@ -130,7 +130,7 @@ body {
 #slide3:checked ~ .arrows label:nth-child(2),
 #slide4:checked ~ .arrows label:nth-child(3) {
     position: absolute;
-    content: url("images/icons/arrow-left.png");
+    content: url("../trampolines/images/icons/arrow-left.png");
     cursor: pointer;
     right: calc(100% + 20px);
     bottom: 50%;
@@ -143,7 +143,7 @@ body {
 #slide4:checked ~ .arrows label:nth-child(1)
 {
     position: absolute;
-    content: url("images/icons/arrow-right.png");
+    content: url("../trampolines/images/icons/arrow-right.png");
     cursor: pointer;
     left: calc(100% + 20px);
     bottom: 50%;

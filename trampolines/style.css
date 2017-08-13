@@ -109,130 +109,66 @@ nav input[type="search"] {
 
 /* Стилизация СЛАЙДЕРА. Правда нерабочего */
 
-#carusel {
+#carousel {
     display: block;
     width: 100%;
     height: 250px;
     background-color: #fff;
 }
 
-#carusel .slides-caption {
+#carousel .slides-caption {
     position: absolute;
-    top: 10px;
+    top: 5px;
     left: 30px;
     font: normal normal 1.3em sans-serif;
     color: #3483a5;
 }
 
-#carusel > div.container {
-    width: 1040px;
+/* TODO ширина контейнера должна быть одна */
+/* TODO + */
+
+#carousel > div.container {
     height: 100%;
     position: relative;
 }
 
-#carusel input {
+#carousel input {
     display: none;
 }
 
-#carusel label {
+#carousel label {
     opacity: 0.5;
 }
 
-#carusel label:hover {
+#carousel label:hover {
     opacity: 1;
 }
 
-#carusel .all-slides {
+#carousel .all-slides {
     overflow: hidden;
 }
 
-#carusel .inner {
-    margin-top: 45px;
+#carousel .inner {
+    margin-top: 35px;
     width: 500%;
 }
 
-#carusel .slide-unit {
+#carousel .slide-unit {
     float: left;
     width: 208px;
-    height: 205px;
-    background-size: 100% 160px;
-    background-repeat: no-repeat;
+    padding: 5px;
+    text-align: center;
 }
 
-/* Стилизация подписей под фото слайдера */
+#carousel .slide-unit img {
+    width: 100%;
+    height: 140px;
+}
 
-#carusel div.slide-unit::before {
-    position: relative;
-    top: 170px;
-    padding: 0 10px;
-    color: #484848;
+#carousel .title {
     font: normal .8em sans-serif;
-}
-
-
-#carusel div.slide-unit:nth-of-type(1)::before {
-    content: "Trampoliny EasyJump zawiera 1";
-}
-
-#carusel div.slide-unit:nth-of-type(2)::before {
-    content: "Trampoliny EasyJump zawiera 2";
-}
-
-#carusel div.slide-unit:nth-of-type(3)::before {
-    content: "Trampoliny EasyJump zawiera 3";
-}
-
-#carusel div.slide-unit:nth-of-type(4)::before {
-    content: "Trampoliny EasyJump zawiera 4";
-}
-
-#carusel div.slide-unit:nth-of-type(5)::before {
-    content: "Trampoliny EasyJump zawiera 5";
-}
-
-#carusel div.slide-unit:nth-of-type(6)::before {
-    content: "Trampoliny EasyJump zawiera 6";
-}
-
-#carusel div.slide-unit:nth-of-type(7)::before {
-    content: "Trampoliny EasyJump zawiera 7";
-}
-
-#carusel div.slide-unit:nth-of-type(8)::before {
-    content: "Trampoliny EasyJump zawiera 8";
-}
-
-
-#carusel div.slide-unit:nth-of-type(1) {
-    background-image: url("images/slider01.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(2) {
-    background-image: url("images/slider02.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(3) {
-    background-image: url("images/slider03.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(4) {
-    background-image: url("images/slider04.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(5) {
-    background-image: url("images/slider05.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(6) {
-    background-image: url("images/slider05.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(7) {
-    background-image: url("images/slider05.jpg");
-}
-
-#carusel div.slide-unit:nth-of-type(8) {
-    background-image: url("images/slider05.jpg");
+    text-align: center;
+    color: #484848;
 }
 
 /* Раздел указывающий на какой промежуток сдвигать изображения при нажатии на стрелку */
@@ -255,7 +191,7 @@ nav input[type="search"] {
 
 /* Стилизация плавного перехода */
 
-#carusel .all-slides .inner {
+#carousel .inner {
     transition: all .8s ease-in-out;
 }
 
@@ -285,7 +221,7 @@ nav input[type="search"] {
     transform: translateY(50%);
 }
 
-/*.description {
+.description {
     display: inline-block;
     list-style-type: none;
     padding: 0;
@@ -294,21 +230,127 @@ nav input[type="search"] {
 
 .description li {
     float: left;
+    margin-right: 10px;
 }
 
 .description li a {
     display: none;
-    padding: 105px;
+    padding-top: 5px;
+    font: bold .9em sans-serif;
     text-decoration: none;
-    color: #202f4e;
+    color: #868686;
+}
+
+.description li a:hover {
+    color: #b03e14;
+}
+
+.slide-unit:hover {
+    border: 2px solid lightblue;
 }
 
 .slide-unit:hover .description a {
     display: block;
-    width: 50px;
-    height: 50px;
-    background-color: whitesmoke;
-}*/
+}
+
+/* Слайдер РЕКЛАМНЫЙ */
+
+.adv-carousel {
+    width: 815px;
+    height: 205px;
+    display: inline-block;
+    position: relative;
+    margin-right: 10px;
+}
+
+.adv-inner {
+    box-sizing: border-box;
+    width: 401%;
+    height: inherit;
+}
+
+.adv-carousel > input {
+    display: none;
+}
+
+.adv-slides {
+    overflow: hidden;
+}
+
+.adv-slide {
+    box-sizing: border-box;
+    width: 815px;
+    height: 205px;
+    float: left;
+}
+
+.adv-slide img {
+    width: inherit;
+    height: inherit;
+}
+
+/* Стилизация и позиционироание radio-переключателей на слайдере */
+
+.adv-carousel .adv-controls {
+    position: absolute;
+    left: 50%;
+}
+
+.adv-carousel label {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    top: -30px;
+    right: 50px;
+    margin-right: 20px;
+}
+
+.adv-carousel label:hover {
+    background: #d7d32e;
+}
+
+#adv-id-slide1:checked ~ .adv-controls label:nth-of-type(1),
+#adv-id-slide2:checked ~ .adv-controls label:nth-of-type(2),
+#adv-id-slide3:checked ~ .adv-controls label:nth-of-type(3),
+#adv-id-slide4:checked ~ .adv-controls label:nth-of-type(4) {
+    background: #ff4500;
+}
+
+.adv-carousel label::after {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    border: 2px solid #383838;
+    content: "";
+    display: block;
+    border-radius: 50%;
+    top: -2px;
+    left: -2px;
+}
+
+/* Сдвиг слайдов */
+
+#adv-id-slide1:checked ~ .adv-slides .adv-inner {
+    margin-left: 0;
+}
+
+#adv-id-slide2:checked ~ .adv-slides .adv-inner {
+    margin-left: -815px;
+}
+
+#adv-id-slide3:checked ~ .adv-slides .adv-inner {
+    margin-left: calc(-815px * 2);
+}
+
+#adv-id-slide4:checked ~ .adv-slides .adv-inner {
+    margin-left: calc(-815px * 3);
+}
+
+.adv-inner {
+    transition: all .5s ease-in-out;
+}
 
 /* Стилизация раздела рекламных баннеров */
 
@@ -418,9 +460,11 @@ main figure.photo-gallery a:hover {
 
 /* Стилизация футера */
 
-footer .container {
+/* TODO У этого контейнера не должно быть отдельного стиля */
+/* TODO + */
+
+footer {
     box-sizing: content-box;
-    width: 1040px;
     font: normal .9em sans-serif;
     color: #cacaca;
 }
@@ -428,6 +472,33 @@ footer .container {
 footer .foot-info-left {
     height: 100%;
     line-height: 50px;
+}
+
+footer .foot-info-left a {
+    color: #d6be5a;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+footer .foot-info-left a:hover {
+    color: #2db0ff;
+    text-decoration: none;
+}
+
+footer .foot-info-left a.fb-logo {
+    content: url("images/icons/fb-logo.svg");
+}
+
+footer .foot-info-left a.twitter-logo {
+    content: url("images/icons/twitter-logo.svg");
+}
+
+footer .foot-info-left a.fb-logo:hover {
+    content: url("images/icons/fb-logo-hover.svg");
+}
+
+footer .foot-info-left a.twitter-logo:hover {
+    content: url("images/icons/twitter-logo-hover.svg");
 }
 
 footer .foot-info-right {
@@ -456,33 +527,7 @@ footer hr {
     height: 1px;
 }
 
-footer .foot-info-left a {
-    color: #d6be5a;
-    text-decoration: none;
-}
-
-footer .foot-info-left a.fb-logo {
-    content: url("images/icons/fb-logo.svg");
-}
-
-footer .foot-info-left a.twitter-logo {
-    content: url("images/icons/twitter-logo.svg");
-}
-
-footer .foot-info-left a.fb-logo:hover {
-    content: url("images/icons/fb-logo-hover.svg");
-}
-
-footer .foot-info-left a.twitter-logo:hover {
-    content: url("images/icons/twitter-logo-hover.svg");
-}
-
-footer .foot-info-left a:hover {
-    color: #2db0ff;
-    text-decoration: none;
-}
-
-.clear-fix {
+.clear-fix::after {
     content: "";
     display: table;
     clear: both;
