@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical Bootstrap page</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="styles02.css" rel="stylesheet">
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Bootstrap. Практические задания</h1>
+    <h2>5.1 Компоненты. <b>Кнопки. Элементы формы</b></h2>
+
+    <div class="row">
+        <div class="col-md-1 scale-ruler">01</div>
+        <div class="col-md-1 scale-ruler">02</div>
+        <div class="col-md-1 scale-ruler">03</div>
+        <div class="col-md-1 scale-ruler">04</div>
+        <div class="col-md-1 scale-ruler">05</div>
+        <div class="col-md-1 scale-ruler">06</div>
+        <div class="col-md-1 scale-ruler">07</div>
+        <div class="col-md-1 scale-ruler">08</div>
+        <div class="col-md-1 scale-ruler">09</div>
+        <div class="col-md-1 scale-ruler">10</div>
+        <div class="col-md-1 scale-ruler">11</div>
+        <div class="col-md-1 scale-ruler">12</div>
+    </div>
+    <div class="row">
+
+        <!-- Группа кнопок без стилевого контейнера -->
+
+        <div class="col-md-3">
+            <h5>
+                <small>Группа кнопок без стилевого контейнера</small>
+            </h5>
+            <button class="btn btn-default" type="button">Первая</button>
+            <button class="btn btn-default" type="button">Вторая</button>
+            <button class="btn btn-default" type="button">Третья</button>
+        </div>
+
+        <!-- Группировка кнопок .btn-group -->
+
+        <div class="col-md-3">
+            <h5>
+                <small>Группировка кнопок .btn-group</small>
+            </h5>
+            <div class="btn-group">
+                <button class="btn btn-default" type="button">Первая</button>
+                <button class="btn btn-default" type="button">Вторая</button>
+                <button class="btn btn-default" type="button">Третья</button>
+            </div>
+        </div>
+
+        <!-- Группировка кнопок .btn-group > .btn-toolbar -->
+
+
+        <div class="col-md-3">
+            <h5>
+                <small>Группировка кнопок .btn-group > .btn-toolbar</small>
+            </h5>
+            <div class="btn-group">
+                <div class="btn-toolbar">
+                    <button class="btn btn-default" type="button">Первая</button>
+                    <button class="btn btn-default" type="button">Вторая</button>
+                    <button class="btn btn-default" type="button">Третья</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Выпадающее меню -->
+
+        <div class="col-md-2">
+            <h5>
+                <small>Выпадающее меню</small>
+            </h5>
+            <div class="dropdown">
+                <button class="btn btn-default" type="button" data-toggle="dropdown">Меню&ensp;<span
+                        class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-header">Первое меню</li>
+                    <li><a href="#">Пункт первого меню 1</a></li>
+                    <li><a gref="#">Пункт первого меню 2</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Второе меню</li>
+                    <li><a href="#">Пункт второго меню 1</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <!-- Группа кнопок с выпадающим меню -->
+
+        <div class="col-md-3">
+            <h5>
+                <small>Группа кнопок с выпадающем меню</small>
+            </h5>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-default">Кнопка 1</button>
+                <button type="button" class="btn btn-default">Кнопка 2</button>
+
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Меню&ensp;<span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Пункт 1</a></li>
+                        <li><a href="#">Пункт 2</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Добавление текста к элементу ввода -->
+
+        <div class="col-md-3">
+            <h5>
+                <small>Добавление текста к элементу ввода</small>
+            </h5>
+
+            <div class="input-group">
+                <span class="input-group-addon">E-mail</span>
+                <input type="text" class="form-control"/>
+                <span class="input-group-addon">@</span>
+            </div>
+
+        </div>
+
+        <!-- Добавление кнопок к элементу ввода -->
+
+        <div class="col-md-3">
+            <h5>
+                <small>Добавление кнопок к элементу ввода</small>
+            </h5>
+            <div class="input-group">
+
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Кнопка</button>
+                </span>
+
+                <input type="text" class="form-control"/>
+            </div>
+        </div>
+
+        <!-- Добавление кнопки с выпадающим меню к элементу ввода -->
+
+        <div class="col-md-3">
+            <h5>
+                <small>Добавление кнопки с выпадающим меню</small>
+            </h5>
+
+            <div class="input-group">
+
+                <div class="input-group-btn">
+
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        Действие&ensp;<span class="caret"></span>
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Действие 1</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Действие 2</a></li>
+                    </ul>
+
+                </div>
+
+                <input type="text" class="form-control">
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <!-- Кнопки навигации -->
+        <div class="col-md-12"><h4>Меню навигации</h4></div>
+    </div>
+
+    <div class="row">
+
+        <!-- Вкладки -->
+        <div class="col-md-4">
+            <h5>
+                <small>Навигация вкладки .nav-tabs</small>
+            </h5>
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="active"><a href="#">Первая</a></li>
+                <li><a href="#">Вторая</a></li>
+                <li class="disabled"><a href="#">Третья</a></li>
+                <li><a href="#">Четвёртая</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Навигация ввиде кнопок -->
+        <div class="col-md-4">
+            <h5>
+                <small>Навигация кнопки .nav-pills</small>
+            </h5>
+
+            <ul class="nav nav-pills" role="tablist">
+                <li class="active"><a href="#">Первая</a></li>
+                <li><a href="#">Вторая</a></li>
+                <li class="disabled"><a href="#">Третья</a></li>
+                <li><a href="#">Четвёртая</a></li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+<script src="../jquery/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

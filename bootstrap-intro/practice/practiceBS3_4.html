@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical Bootstrap page</title>
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="styles02.css" rel="stylesheet">
+
+    <style type="text/css">
+
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Bootstrap. Практические задания</h1>
+    <h2>3.4 Работа c формами</h2>
+
+    <div class="row">
+        <div class="col-md-1 scale-ruler">01</div>
+        <div class="col-md-1 scale-ruler">02</div>
+        <div class="col-md-1 scale-ruler">03</div>
+        <div class="col-md-1 scale-ruler">04</div>
+        <div class="col-md-1 scale-ruler">05</div>
+        <div class="col-md-1 scale-ruler">06</div>
+        <div class="col-md-1 scale-ruler">07</div>
+        <div class="col-md-1 scale-ruler">08</div>
+        <div class="col-md-1 scale-ruler">09</div>
+        <div class="col-md-1 scale-ruler">10</div>
+        <div class="col-md-1 scale-ruler">11</div>
+        <div class="col-md-1 scale-ruler">12</div>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="Email1">Адрес электронной почты</label>
+            <input type="email" class="form-control" id="Email1" placeholder="Введите E-mail"/>
+        </div>
+    </form>
+
+    <hr/>
+
+
+    <!-- Встроенная форма с элементами на одной линии • class="form-inline" -->
+
+    <form class="form-inline">
+
+        <div class="form-group">
+            <label class="sr-only" for="firstName">Имя</label>
+            <input type="text" class="form-control" id="firstName" placeholder="Введите Имя"/>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName" class="sr-only">Фамилия</label>
+            &ensp;<input type="text" class="form-control" id="lastName" placeholder="Введите Фамилию"/>
+        </div>
+
+        <div class="checkbox">
+            <label>
+                &emsp;<input type="checkbox"/>&ensp;Запомнить меня&emsp;
+            </label>
+        </div>
+
+        <button type="submit" class="btn btn-default">Отправить</button>
+
+    </form>
+
+    <hr/>
+
+
+    <!-- Горизонтальная форма • class="form-horizontal" с размещением по сетке -->
+
+    <h4>Горизонтальная форма с размещением по сетке .form-horizontal</h4>
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="Email" class="col-sm-2">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="Email" placeholder="Введите эл. адрес"/>
+            </div>
+        </div>
+    </form>
+
+    <hr/>
+
+
+    <div class="row">
+        <div class="col-md-6">
+
+            <h4>Элементы уведомлений: has-success, has-warning, has-error</h4>
+            <form>
+                <div class="form-group has-success">
+                    <label for="inputSuccess" class="control-label">Успешный ввод</label>
+                    <input type="text" class="form-control" id="inputSuccess"/>
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group has-warning">
+                    <label for="inputWarning" class="control-label">Ввод с предупреждением</label>
+                    <input type="text" class="form-control" id="inputWarning"/>
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group has-error">
+                    <label for="inputError" class="control-label">Ввод с ошибкой</label>
+                    <input type="text" class="form-control" id="inputError"/>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-md-6">
+
+            <h4>Поля уведомлений со значками + .has-feeback</h4>
+            <form>
+                <div class="form-group has-success has-feedback">
+                    <label for="inputSuccess2" class="control-label">Успешный ввод с иконкой</label>
+                    <input type="text" class="form-control" id="inputSuccess2"/>
+                    <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group has-warning has-feedback">
+                    <label for="inputWarning2" class="control-label">Предупредительный ввод с иконкой</label>
+                    <input type="text" class="form-control" id="inputWarning2"/>
+                    <span class="glyphicon glyphicon-warning-sign form-control-feedback"></span>
+                </div>
+            </form>
+
+            <form>
+                <div class="form-group has-error has-feedback">
+                    <label for="inputError2" class="control-label">Успешный ввод с иконкой</label>
+                    <input type="text" class="form-control" id="inputError2"/>
+                    <span class="glyphicon glyphicon-remove-sign form-control-feedback"></span>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+    <hr/>
+    <h4>Размеры элементов форм</h4>
+
+    <div class="form-group has-error has-feedback">
+        <label for="inputError2" class="control-label">Поле ввода с иконкой и шириной input-sm</label>
+        <input type="text" class="form-control input-sm" id="inputError2"/>
+        <span class="glyphicon glyphicon-remove-sign form-control-feedback"></span>
+    </div>
+
+    <div class="form-group has-success has-feedback">
+        <label for="inputSuccess2" class="control-label">Поле ввода с иконкой и шириной input-lg</label>
+        <input type="text" class="form-control input-lg" id="inputSuccess2"/>
+        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+    </div>
+
+
+</div>
+
+
+<script src="../jquery/jquery.min.js"></script>
+<script src="../bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

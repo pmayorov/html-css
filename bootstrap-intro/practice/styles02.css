@@ -1,0 +1,39 @@
+/* Индивидуальные стили */
+
+.container > h1 + h2 {
+    color: #868686;
+    margin-top: 0;
+}
+
+.scale-ruler {
+    margin-bottom: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #979797;
+    background-color: #f6f6f6;
+}
+
+.scale-ruler:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+h4 {
+    margin-top: 20px;
+    color: #823042;
+}
+
+h5 {
+    margin-top: 10px;
+    color: #2a5282;
+}
+

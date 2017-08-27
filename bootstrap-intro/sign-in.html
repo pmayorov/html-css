@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap Project</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">-->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">Мой Проект</a>
+        <ul class="nav navbar-nav">
+            <li><a href="index.html">Домой</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Вход</a></li>
+            <li><a href="sign-up.html">Регистрация</a></li>
+        </ul>
+
+    </div>
+
+</nav>
+
+<!--<div class="container">-->
+<div class="container" hidden>
+
+    <div class="row">
+        <div class="col-md-1 scale-ruler">01</div>
+        <div class="col-md-1 scale-ruler">02</div>
+        <div class="col-md-1 scale-ruler">03</div>
+        <div class="col-md-1 scale-ruler">04</div>
+        <div class="col-md-1 scale-ruler">05</div>
+        <div class="col-md-1 scale-ruler">06</div>
+        <div class="col-md-1 scale-ruler">07</div>
+        <div class="col-md-1 scale-ruler">08</div>
+        <div class="col-md-1 scale-ruler">09</div>
+        <div class="col-md-1 scale-ruler">10</div>
+        <div class="col-md-1 scale-ruler">11</div>
+        <div class="col-md-1 scale-ruler">12</div>
+    </div>
+
+</div>
+
+<div class="container">
+
+    <div class="col-md-8 col-md-offset-4">
+        <h2>Авторизация</h2>
+    </div>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="userName" class="col-md-1 col-md-offset-3 control-label">Логин</label>
+            <div class="col-md-5">
+                <input type="text" class="form-control" id="userName" placeholder="Введите ваш логин"/>
+            </div>
+        </div>
+    </form>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="password"
+                   class="col-md-1 col-md-offset-3 control-label">Пароль</label>
+            <div class="col-md-5">
+                <input type="password" class="form-control" id="password" placeholder="Введите пароль"/>
+            </div>
+        </div>
+    </form>
+
+    <div class="row">
+        <div class="col-md-5 col-md-offset-4">
+            <button type="submit" class="btn btn-success">Подтвердить</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<script src="jquery/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

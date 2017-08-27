@@ -1,76 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Bootstrap Page</title>
+    <title>Bootstrap Project</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <!--<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">-->
+    <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
-        <div class="col-lg-1"><span>col-lg-1</span></div>
+
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#">Мой Проект</a>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Домой</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="sign-in.html">Вход</a></li>
+            <li><a href="sign-up.html">Регистрация</a></li>
+        </ul>
+
     </div>
 
-
-
-</div>
-
-<p>&nbsp;</p>
+</nav>
 
 <div class="container">
-    <div class="row">
-        <div class="col-md-6"><span class="alert alert-success">Вы успешно дочитали до этого места</span></div>
-        <div class="col-md-6"><span>col-md-6</span></div>
-    </div>
-</div>
 
-<p>&nbsp;</p>
+    <div class="jumbotron">
+        <h1>Ваш шедевр готов!</h1>
+        <p>Разнообразный и богатый опыт консультация с широким активом влечет за собой процесс внедрения и модернизации
+            направлений прогрессивного развития.</p>
+
+        <div class="btn-group-lg">
+
+            <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">Новый шедевр&ensp;<span
+                    class="glyphicon glyphicon-menu-right"></span></button>
+
+            <!-- Всплывающее окно -->
+
+            <div id="myModal" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button class="close" type="button" data-dismiss="modal">×</button>
+                            <h4 class="modal-title">Новый шедевр</h4>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <div class="form-group">
+                                <label type="text" for="caption-article">Заголовок</label>
+                                <input id="caption-article" class="form-control" placeholder="Заголовок"/>
+                            </div>
+
+                            <div class="form-group">
+                                <label type="text" for="content-article">Содержание</label>
+                                <textarea id="caption-article" class="form-control" rows=4
+                                          placeholder="Содержание"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
+                            <button class="btn btn-success" type="button" data-dismiss="modal">Сохранить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-th-large"></span></a>
+            <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-th"></span></a>
+        </div>
+
+    </div>
+
+</div>
 
 <div class="container">
+
     <div class="row">
-        <div class="col-xs-6"><span>col-xs-6</span></div>
-        <div class="col-xs-6"><span><pre><code>body {
-  color: #666;
-  font: 14px/20px Arial, sans-serif;
-            }</code></pre></span></div>
+        <div class="col-md-6">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <p>Дата создания:
+                        <time datetime="2017-08-28">28-08-2017</time>
+                        <span class="glyphicon glyphicon-pencil"></span><span class="glyphicon glyphicon-remove"></span>
+                    </p>
+                    <h3>Привет мир!!!</h3>
+                    <p>Здесь должна быть шедевральная заметка</p>
+                    <p><span class="glyphicon glyphicon-user"></span>&ensp;Автор:<br/>Петр Иванов</p>
+                </div>
+                
+                <div class="panel-body">
+                    <button type="button" class="btn btn-default">Подробнее</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
-
-<p>&nbsp;</p>
-
-<div class="row">
-    <div class="col-sm-12 top">
-      <div class="row">
-          <div class="col-md-2" col-md-offset-2><span>.col-md-2</span></div>
-          <div class="col-md-2"><span>.col-md-2</span></div>
-          <div class="col-md-2"><span>.col-md-2</span></div>
-      </div>
-    </div>
-</div>
-
-<p>&nbsp;</p>
-<div style="border: 1px solid green" class="container">
-<div class="row">
-    <div class="col-md-4 col-md-push-4">Модуль 1</div>
-    <div class="col-md-4 col-md-pull-3">Модуль 2</div>
-</div>
-</div>
-
 
 <script src="jquery/jquery.min.js"></script>
 <script src="bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>

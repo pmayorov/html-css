@@ -1,0 +1,18 @@
+.scale-ruler {
+    margin-bottom: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #979797;
+    background-color: #f6f6f6;
+}
+
+.scale-ruler:nth-child(odd) {
+    background-color: #e6e6e6;
+}
+
+.glyphicon-pencil, .glyphicon-remove {
+    color: #337ab7;
+}
+
