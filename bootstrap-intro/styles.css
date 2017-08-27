@@ -1,0 +1,43 @@
+/* Индивидуальные стили */
+
+.container > h1 + h2 {
+    color: #868686;
+    margin-top: 0;
+}
+
+.scale-ruler {
+    margin-bottom: 20px;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: #979797;
+    background-color: #f6f6f6;
+}
+
+.row {
+    margin-top: 20px;
+    background-color: lightgoldenrodyellow;
+}
+
+div[class^="col-"]:not(.scale-ruler) {
+    background-color: #f6f6f6;
+    padding: 15px;
+    font-size: 1.1em;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+div[class^="col-"]:nth-child(odd) {
+    background-color: #ececec;
+    text-align: center;
+}
+
+.fill-white {
+    background-color: #ffffff!important;
+}
+
+th {
+    text-align: center;
+}
+
